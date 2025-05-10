@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+        <title>Inviyaco - Undangan Online</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+            rel="stylesheet">
+        <!-- Swiper CSS -->
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+        <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #121212;
+      color: #f1f1f1;
+    }
+
+    h1, h3, h5 {
+      color: #2ecc71;
+    }
+
+    .hero {
+      background-color: #1e2b23;
+      padding: 3rem 1rem;
+      text-align: center;
+      border-radius: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      border: none;
+      border-radius: 1rem;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    .card-title {
+      color: #2ecc71;
+    }
+
+    .bg-success-custom {
+      background-color: #2ecc71 !important;
+      color: #fff;
+    }
+
+    .scrolling-wrapper {
+      display: flex;
+      overflow-x: auto;
+      animation: scroll-left 30s linear infinite;
+      gap: 1rem;
+      padding: 1rem 0;
+    }
+
+    .testimonial-card {
+      min-width: 300px;
+      background-color: #1e2b23;
+      color: #fff;
+    }
+
+    @keyframes scroll-left {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    footer {
+      background-color: #1e2b23;
+      padding: 3rem 1rem;
+      color: #ccc;
+    }
+
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;
+      font-size: 24px;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .map {
+      border: none;
+      border-radius: 1rem;
+      width: 100%;
+      height: 200px;
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    .pulse {
+    animation: pulse 1.5s infinite;
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+  }
+
+  .promo-highlight {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff4d4d;
+  }
+
+  .promo-section {
+    background: linear-gradient(135deg, #1e2b23, #2ecc71);
+    color: white;
+    border-radius: 1rem;
+    padding: 2.5rem 1rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  }
+
+  .testimonial-card {
+    background-color: #1e2b23;
+    color: #f1f1f1;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin: 1rem;
+    height: 100%;
+  }
+
+  .swiper {
+    padding-bottom: 2rem;
+  }
+
+  .swiper-pagination-bullet {
+    background-color: #2ecc71;
+  }
+
+  @media (max-width: 576px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  .promo-highlight {
+    font-size: 2rem;
+  }
+
+  .testimonial-card {
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+
+  .card img {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .map {
+    height: 150px;
+  }
+
+  footer .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+
+  .swiper {
+    padding: 1rem 0 2rem 0;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .whatsapp-button {
+    padding: 10px;
+    font-size: 18px;
+  }
+}
+
+ /* Ukuran default untuk desktop dan perangkat besar */
+ .hero h1 {
+    font-size: 4rem; /* Besar untuk desktop */
+  }
+
+  /* Ukuran responsif untuk perangkat mobile */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 3rem; /* Ukuran lebih kecil untuk HP */
+    }
+  }
+
+
+  </style>
+    </head>
+    <body>
+
+        <!-- Hero -->
+        <section class="container-fluid hero text-center">
+            <h1 class="display-4 fw-bold mb-3">
+                <span style="color: #2ecc71;">I</span><span
+                    style="color: #fff;">nviyaco</span>
+            </h1>
+            <p class="lead">
+                Solusi undangan digital <strong>modern</strong> &
+                <strong>custom</strong> untuk momen spesialmu.
+                <br class="d-none d-md-inline">Estetik, praktis, dan langsung
+                bisa dibagikan ke seluruh dunia.
+            </p>
+        </section>
+
+        <!-- Pilihan Undangan -->
+        <section class="container my-5">
+            <h3 class="text-center mb-4">Pilih Undanganmu</h3>
+            <div class="swiper undanganSwiper">
+                <div class="swiper-wrapper">
+
+                    <!-- Card 1 -->
+                    <div class="swiper-slide">
+                        <div
+                            class="card bg-dark text-light testimonial-card text-center">
+                            <img
+                                src="Assets/Pernikahan-1.PNG"
+                                class="card-img-top rounded-top"
+                                alt="Undangan Elegan">
+                            <div class="card-body">
+                                <h5 class="card-title text-success">Undangan
+                                    Pernikahan</h5>
+                                <p class="card-text">Tampilan simpel namun
+                                    mewah, cocok untuk pernikahan modern.</p>
+                                <a href="detail-produk-Pernikahan.html"
+                                    class="btn btn-success">Pesan
+                                    Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="swiper-slide">
+                        <div
+                            class="card bg-dark text-light testimonial-card text-center">
+                            <img
+                                src="Assets/Kelulusan-1.PNG"
+                                class="card-img-top rounded-top"
+                                alt="Undangan Floral">
+                            <div class="card-body">
+                                <h5 class="card-title text-success">Informasi
+                                    Kelulusan Sekolah</h5>
+                                <p class="card-text">Desain Simple Untuk
+                                    Memudahkan Para Siswa Mengecek Informasi
+                                    Kelulusan Mereka Dengan Tema Modern Ala Anak
+                                    Gen-Z</p>
+                                    <a href="detail-produk-Kelulusan.html"
+                                        class="btn btn-success">Pesan
+                                        Sekarang</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="swiper-slide">
+                            <div
+                                class="card bg-dark text-light testimonial-card text-center">
+                                <img
+                                    src="Assets/Buka-1.PNG"
+                                    class="card-img-top rounded-top"
+                                    alt="Undangan Modern">
+                                <div class="card-body">
+                                    <h5 class="card-title text-success">Undangan
+                                        Buka Puasa</h5>
+                                    <p class="card-text">Minimalis, interaktif,
+                                        dan
+                                        cocok untuk Gen-Z yang ingin tampil
+                                        beda.</p>
+                                    <a href="detail-produk-Buka.html"
+                                        class="btn btn-success">Pesan
+                                        Sekarang</a>
+                                </div>
+                            </div>
+                        </div>
+
+                         <!-- Card 3 -->
+                         <div class="swiper-slide">
+                            <div
+                                class="card bg-dark text-light testimonial-card text-center">
+                                <img
+                                    src="Assets/Natal-1.PNG"
+                                    class="card-img-top rounded-top"
+                                    alt="Undangan Modern">
+                                <div class="card-body">
+                                    <h5 class="card-title text-success">Undangan Acara Natal</h5>
+                                    <p class="card-text">Minimalis, interaktif,
+                                        dan
+                                        cocok untuk Gen-Z yang ingin tampil
+                                        beda.</p>
+                                    <a href="detail-produk-Natal.html"
+                                        class="btn btn-success">Pesan
+                                        Sekarang</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Navigasi -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+
+            <!-- Promo -->
+            <section class="container-fluid hero my-5">
+                <div class="promo-section text-center">
+                    <h3 class="mb-3">HANYA</h3>
+                    <div class="promo-highlight pulse">Rp100.000</div>
+                    <p class="mt-3">Langsung dapat undangan digital
+                        <strong>aktif</strong>, <em>custom sesuai
+                            keinginan</em>,
+                        dan bisa dibagikan ke seluruh dunia!</p>
+                </div>
+            </section>
+
+            <!-- Testimoni -->
+            <section class="container-fluid hero my-5">
+                <h3 class="text-center mb-4">Apa Kata Mereka?</h3>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+
+                        <!-- Testimoni 1 -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-card text-center">
+                                <h5>Ketua Jurusan SMKN 7 Makassar</h5>
+                                <p>"Sesuai keinginan, tampilannya cantik dan interaktif. Thanks Inviyaco!"</p>
+                                <p>⭐⭐⭐⭐⭐</p>
+                            </div>
+                        </div>
+
+                        <!-- Testimoni 2 -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-card text-center">
+                                <h5>Pasutri Muda</h5>
+                                <p>Deadline Mendadak Tetapi tetep bisa order, Makasih Inviyaco!</p>
+                                <p>⭐⭐⭐⭐⭐</p>
+                            </div>
+                        </div>
+
+                        <!-- Testimoni 2 -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-card text-center">
+                                <h5>Kesiswaan Sekolah</h5>
+                                <p>Website Responsive dan mudah untuk digunakan bagi yang sudah usia, Terimakasih Inviyaco!</p>
+                                <p>⭐⭐⭐⭐⭐</p>
+                            </div>
+                        </div>
+
+                        <!-- Testimoni 2 -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-card text-center">
+                                <h5>Gereja Toraja</h5>
+                                <p>Terimakasih Sudah Membantu Dalam Membuat Undangan Paskah Gereja Kami. God Bless U!</p>
+                                <p>⭐⭐⭐⭐⭐</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Navigasi & pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="container-fluid mt-5">
+                <div class="row py-4 px-3 text-center text-md-start"
+                    style="background-color: #1e2b23;">
+
+                    <!-- Kontak -->
+                    <div class="col-md-4 mb-4">
+                        <h5 class="text-success">Kontak Kami</h5>
+                        <p>📧 <a href="mailto:info@inviyaco.my.id"
+                                class="text-decoration-none text-light">info@inviyaco.my.id</a></p>
+                        <p>📞 <a href="tel:085141348642"
+                                class="text-decoration-none text-light">0851-4134-8642</a></p>
+                        <p>📍 Jl. K. H. Wahid Hasyim No.39, Sungguminasa, Kec.
+                            Somba Opu, Kabupaten Gowa, Sulawesi Selatan 92111,
+                            Indonesia</p>
+                        <p>🕒 Jam Operasional: 09.00 - 23.00 WITA</p>
+                    </div>
+
+                    <!-- Sosial Media -->
+                    <div class="col-md-4 mb-4">
+                        <h5 class="text-success">Sosial Media</h5>
+                        <p>
+                            <a href="index.html"
+                                class="text-decoration-none text-light me-3">🌐
+                                Website</a>
+                            <a href="https://www.instagram.com/inviyaco?igsh=MXQ3MW9oczdmOTliaw=="
+                                class="text-decoration-none text-light me-3">📸
+                                Instagram</a>
+                            <a href="https://wa.me/6285141348642"
+                                class="text-decoration-none text-light">💬
+                                WhatsApp</a>
+                        </p>
+                        <p>Ikuti kami untuk update desain dan promo terbaru!</p>
+                    </div>
+
+                    <!-- Google Maps -->
+                    <div class="col-md-4">
+                        <h5 class="text-success">Lokasi</h5>
+                        <iframe class="map"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.0957031220197!2d119.4522381!3d-5.2090882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbee3d9227ab505%3A0xc0f2dc532a96caf5!2sBalla+Lompoa+Museum!5e0!3m2!1sen!2sid!4v1715110979399"
+                            width="100%" height="200" style="border:0;"
+                            allowfullscreen loading="lazy"></iframe>
+                    </div>
+
+                </div>
+
+                <!-- Copyright -->
+                <div class="text-center py-3"
+                    style="background: linear-gradient(to right, #2ecc71, #0a0a0a);">
+                    <small style="color: #f1f1f1;">
+                        &copy; 2025 <strong
+                            style="color: #ffffff;">Inviyaco.my.id</strong> —
+                        All
+                        rights reserved.
+                        <span style="opacity: 0.85; color: white;">
+                            Desain dan pengembangan oleh
+                            <span style="color: #2ecc71;">I</span>nviyaco.
+                        </span>
+
+                    </small>
+                </div>
+
+            </footer>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/6285141348642?text=Halo, saya ingin tanya-tanya dulu nih!" class="whatsapp-button"
+                target="_blank" aria-label="Chat via WhatsApp">
+                💬
+            </a>
+
+            <script
+                src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+            <!-- Swiper JS -->
+            <script
+                src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+            <script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2
+      },
+      1024: {
+        slidesPerView: 3
+      }
+    }
+  });
+
+  var swiper2 = new Swiper(".undanganSwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2
+        },
+        1024: {
+          slidesPerView: 3
+        }
+      }
+    });
+</script>
+
+        </body>
+    </html>

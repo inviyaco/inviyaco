@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Undangan Pernikahan - Sarah & Alvin</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+            rel="stylesheet">
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+        <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #000000, #434343);
+            color: #fff;
+        }
+
+        .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #000000, #444444);
+    color: white;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.hero-content {
+    max-width: 900px;
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.hero h3 {
+    font-size: 3rem;
+    color: #FFCC00;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #e1e1e1;
+}
+
+.hero .invitation-text {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #dcdcdc;
+    margin-bottom: 2rem;
+}
+
+.hero .btn-primary {
+    background-color: #FFCC00;
+    color: black;
+    font-size: 1rem;
+    padding: 10px 30px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.hero .btn-primary:hover {
+    background-color: #e6b800;
+}
+
+/* Slideshow Card Style */
+.hero-slideshow {
+    width: 100%;
+    max-width: 900px;
+    margin-top: 2rem;
+    position: relative;
+    overflow: hidden; /* Menghindari gambar keluar dari area card */
+}
+.card {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    transition: transform 0.5s ease;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero h3 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .hero .invitation-text {
+        font-size: 1rem;
+    }
+
+    .hero-content {
+        padding: 0 1rem;
+    }
+}
+
+
+
+
+
+        .date-time {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 3rem;
+            border-radius: 20px;
+            margin-top: 4rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .date-time h3 {
+            font-size: 2.5rem;
+            color: #FFCC00;
+            margin-bottom: 1.5rem;
+        }
+
+        .date-time .row {
+            margin-top: 2rem;
+        }
+
+        .details {
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        .details h4 {
+            font-size: 2rem;
+            color: #FFCC00;
+            font-weight: 600;
+        }
+
+        .details .card {
+            background-color: #2C2C2C;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            transform: scale(0.98);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .details .card:hover {
+            transform: scale(1.05);
+        }
+
+        .details .card-body {
+            padding: 2rem;
+            color: white;
+        }
+
+        .details .card-body h5 {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .details .card-body p {
+            font-size: 1rem;
+        }
+
+        .rsvp-btn {
+            margin-top: 3rem;
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background-color: #FFCC00;
+            color: #000;
+            border-radius: 50px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .rsvp-btn:hover {
+            background-color: #FF6600;
+        }
+
+        .map-container {
+            margin-top: 3rem;
+            position: relative;
+            width: 100%;
+            height: 400px;
+            margin-bottom: 4rem;
+        }
+
+        .footer {
+    position: relative;
+    padding: 2rem 1rem;
+    background-color: #1F1F1F;
+    color: #fff;
+    text-align: center;
+    margin-top: 5rem; /* Menambahkan jarak agar footer tidak terlalu dekat dengan konten sebelumnya */
+    z-index: 10;
+}
+
+        .footer p {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .footer a {
+            color: #FFCC00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .hero h3 {
+                font-size: 2rem;
+            }
+
+            .details .card {
+                margin-bottom: 2rem;
+                width: 100%;
+            }
+        }
+
+        /* Slideshow Section */
+        .image-slider {
+  background: #111;
+  padding: 60px 0;
+  text-align: center;
+  color: white;
+}
+
+.slider-heading {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.fade-slider {
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Heading untuk Slider */
+.slider-heading {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Styling untuk swiper container */
+.swiper-container {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Card untuk gambar */
+.card {
+    position: relative;
+    width: 100%;
+    height: 400px;  /* Ukuran gambar diatur lebih tinggi */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Gambar dalam card */
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Mengatur gambar agar tidak terdistorsi */
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Efek zoom saat hover */
+.card:hover img {
+    transform: scale(1.05);
+}
+
+/* Styling untuk swiper slide */
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Swiper Slide aktif */
+.swiper-slide-active {
+    opacity: 1;
+}
+
+/* Pagination untuk navigasi titik */
+.swiper-pagination {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+}
+
+/* Styling responsif untuk perangkat mobile */
+@media (max-width: 768px) {
+    .swiper-container {
+        width: 95%;  /* Lebar container lebih besar di perangkat mobile */
+    }
+
+    .card {
+        height: 250px;  /* Ukuran gambar lebih kecil di perangkat mobile */
+    }
+
+    .slider-heading {
+        font-size: 2rem;  /* Ukuran heading lebih kecil di perangkat mobile */
+    }
+
+    .venue-section .info-card {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.venue-section {
+  padding: 60px 15px;
+  background: #181818;
+  color: white;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.info-card {
+  background: #222;
+  padding: 30px;
+  margin: 20px auto;
+  border-radius: 12px;
+  max-width: 600px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+}
+
+.info-card h5 {
+  color: #FFCC00;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.info-card p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.venue-details {
+  padding: 60px 20px;
+  color: #fff;
+  background: linear-gradient(145deg, #0e0e0e, #1a1a1a);
+  text-align: center;
+}
+
+.venue-details h3 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+
+.venue-box {
+  background-color: #222;
+  color: #e0e0e0;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.venue-box:hover {
+  transform: translateY(-5px);
+  background-color: #2b2b2b;
+}
+
+.venue-box h5 {
+  color: #FFCC00;
+  margin-bottom: 15px;
+}
+
+.venue-box a.btn {
+  border-color: #FFCC00;
+  color: #FFCC00;
+  transition: 0.3s;
+}
+
+.venue-box a.btn:hover {
+  background-color: #FFCC00;
+  color: #000;
+}
+
+.cursive-name {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem;
+  color: #FFCC00; /* atau warna elegan lain */
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 576px) {
+  body {
+    font-size: 14px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  .hero {
+    padding: 2rem 1rem;
+    height: auto;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .hero h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero p,
+  .hero .invitation-text {
+    font-size: 0.95rem;
+    padding: 0 0.5rem;
+  }
+
+  .hero .btn-primary {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    border-radius: 30px;
+  }
+
+  .hero-slideshow,
+  .swiper-container {
+    width: 100%;
+    padding: 0 0.5rem;
+  }
+
+  .slider-heading {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .card {
+    height: 180px;
+    border-radius: 10px;
+  }
+
+  .swiper-slide img {
+    max-height: 180px;
+    border-radius: 12px;
+  }
+
+  .date-time {
+    padding: 2rem 1rem;
+    border-radius: 15px;
+  }
+
+  .date-time h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .date-time .row > div {
+    margin-bottom: 1.2rem;
+  }
+
+  .date-time h5 {
+    font-size: 1.2rem;
+  }
+
+  .details {
+    padding: 1rem 1rem;
+  }
+
+  .details h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .details .card-body h5 {
+    font-size: 1.2rem;
+  }
+
+  .details .card-body p {
+    font-size: 0.95rem;
+  }
+
+  .info-card {
+    padding: 1.5rem;
+    max-width: 100%;
+    margin: 1rem auto;
+  }
+
+  .venue-section {
+    padding: 2rem 1rem;
+  }
+
+  .cursive-name {
+    font-size: 2rem;
+  }
+
+  .rsvp-btn {
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+    margin-top: 2rem;
+    border-radius: 30px;
+  }
+
+  .footer {
+        padding: 1.5rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .footer p {
+        font-size: 0.9rem;
+    }
+
+    /* Pastikan elemen di footer tidak terlalu besar dan tetap rapi */
+    .footer a {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+  .map-container {
+    height: 250px;
+  }
+}
+
+/* Styling untuk Loading Screen */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+.loading-screen h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    color: #FFCC00; /* Warna emas */
+    margin: 0;
+}
+
+/* Menyembunyikan loading screen setelah 3 detik */
+.loading-screen.hide {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease, visibility 0s 1s;
+}
+
+audio {
+    display: none;
+}
+
+/* Tombol Pemutar Musik */
+.music-btn {
+    position: fixed; /* Tombol berada di pojok kanan bawah */
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #FFCC00; /* Warna latar belakang kuning (emas) */
+    color: #000; /* Warna ikon hitam untuk kontras */
+    border: none;
+    border-radius: 50%; /* Membuat tombol bulat */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem; /* Ukuran ikon lebih besar */
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Efek bayangan untuk tombol */
+    transition: all 0.3s ease; /* Efek transisi pada hover */
+    z-index: 1000; /* Pastikan tombol berada di atas konten lain */
+}
+
+.music-btn:hover {
+    background-color: #e6b800; /* Warna latar belakang lebih gelap saat hover */
+    transform: scale(1.1); /* Efek pembesaran tombol saat hover */
+}
+
+/* Ikon musik */
+.music-btn i {
+    transition: transform 0.3s ease; /* Transisi halus saat ikon berubah */
+}
+
+/* Efek pada saat ikon berubah */
+.music-btn i.fas {
+    font-size: 2.5rem; /* Ukuran ikon lebih besar agar lebih jelas */
+}
+
+
+
+
+
+
+
+
+
+    </style>
+    </head>
+    <body>
+
+        <audio id="background-music" loop>
+            <source
+                src="Assets/Nothing's Gonna Change My Love For You - Westlife (Lyrics video dan terjemahan).mp3"
+                type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <!-- Tombol untuk Memulai Musik dengan Icon -->
+        <button id="play-music-btn" class="music-btn">
+            <i id="music-icon" class="fas fa-volume-mute"></i>
+        </button>
+
+        <!-- Loading Screen -->
+        <div id="loading-screen" class="loading-screen">
+            <h1 class="cursive-name">Sarah & Alvin</h1>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="container hero">
+            <div class="hero-content">
+                <h1 class="cursive-name">Sarah & Alvin</h1>
+                <h4>Undangan Pernikahan</h4>
+                <p>Dengan segala hormat, kami mengundang Anda untuk merayakan
+                    hari istimewa kami</p>
+
+            </div>
+        </section>
+
+        <!-- Slideshow Section -->
+        <section class="image-slider">
+            <h2 class="slider-heading">Prewedding Moments</h2>
+            <div class="swiper-container fade-slider">
+                <div class="swiper-wrapper">
+                    <!-- Foto Prewed -->
+                    <div class="swiper-slide">
+                        <img src="Assets/1.jpg" alt="Prewedding 1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Assets/2.jpg" alt="Prewedding 2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Assets/3.jpg" alt="Prewedding 3">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <!-- Date and Time Section -->
+        <section class="container date-time">
+            <h3>Detail Acara</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Tanggal</h5>
+                    <p>12 Desember 2025</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Waktu</h5>
+                    <p>08:00 WIB - 13:00 WIB</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="venue-section">
+            <h3 class="section-title">Tempat Acara</h3>
+            <div class="info-card venue-box">
+                <h5>Gereja St. Petrus</h5>
+                <p>Jl. Raya No. 1, Jakarta</p>
+                <a
+                    href="https://maps.google.com/?q=Gereja+St.+Petrus+Jakarta"
+                    target="_blank"
+                    class="btn btn-outline-light btn-sm mt-3">
+                    Klik di sini untuk melihat lokasi tempat acara berlangsung
+                    melalui Google Maps
+                </a>
+            </div>
+
+            <h3 class="section-title">Informasi Pengantin</h3>
+            <div class="info-card venue-box">
+                <h5>Sarah & Alvin</h5>
+                <p>
+                    Dengan penuh sukacita dan rasa syukur yang mendalam, kami
+                    mengucapkan terima kasih atas doa, dukungan, dan kasih
+                    sayang yang telah diberikan kepada kami selama perjalanan
+                    ini. Merupakan suatu kehormatan dan kebahagiaan bagi kami
+                    dapat berbagi momen sakral dan bersejarah ini bersama
+                    orang-orang terkasih seperti Anda.
+                </p>
+                <p>
+                    Kami percaya bahwa cinta tumbuh dalam doa dan restu dari
+                    keluarga serta sahabat. Oleh karena itu, kami sangat
+                    berharap kehadiran Anda dalam pernikahan kami sebagai bentuk
+                    kebersamaan dalam memulai kehidupan baru. Semoga kebahagiaan
+                    yang kami rasakan ini juga menjadi bagian dari kebahagiaan
+                    Anda.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- Google Maps Location -->
+        <section class="container map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984.709982709321!2d119.4522381!3d-5.2090882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbee3d9227ab505%3A0xc0f2dc532a96caf5!2sBalla+Lompoa+Museum!5e0!3m2!1sid!2sid!4v1715103560289"
+                width="100%" height="400" style="border:0;" allowfullscreen
+                loading="lazy"></iframe>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <p>&copy; 2025 Sarah & Alvin. All Rights Reserved.</p>
+            <p>Desain dan pengembangan oleh <span style="color: #2ecc71;">I</span>nviyaco.</p>
+            <p>Untuk info lebih lanjut, hubungi kami di <a
+                    href="mailto:info@inviyaco.my.id">info@inviyaco.my.id</a></p>
+        </footer>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Swiper JS -->
+        <!-- Swiper CDN jika belum disertakan -->
+        <link rel="stylesheet"
+            href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+        <script>
+// Fungsi untuk menghilangkan loading screen setelah beberapa detik
+window.onload = function () {
+    // Putar audio saat halaman dimuat
+    const music = document.getElementById('background-music');
+    music.play(); // Memulai pemutaran audio otomatis
+
+    // Menghilangkan loading screen setelah 3 detik
+    setTimeout(function () {
+        document.getElementById('loading-screen').classList.add('hide');
+    }, 3000); // Menghilangkan loading screen setelah 3 detik
+};
+
+  // Menambahkan Event Listener pada tombol untuk memulai musik
+  document.getElementById('play-music-btn').addEventListener('click', function() {
+        const music = document.getElementById('background-music');
+        const musicIcon = document.getElementById('music-icon');
+
+        // Putar musik atau hentikan musik saat tombol diklik
+        if (music.paused) {
+            music.play().then(() => {
+                console.log("Musik mulai diputar.");
+                // Mengganti ikon musik saat musik diputar
+                musicIcon.classList.remove('fa-volume-mute');
+                musicIcon.classList.add('fa-volume-up');
+            }).catch(error => {
+                console.error("Gagal memutar musik: ", error);
+            });
+        } else {
+            music.pause();
+            console.log("Musik dihentikan.");
+            // Mengganti ikon musik saat musik dihentikan
+            musicIcon.classList.remove('fa-volume-up');
+            musicIcon.classList.add('fa-volume-mute');
+        }
+    });
+
+  const swiper = new Swiper('.fade-slider', {
+    effect: 'fade',
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    fadeEffect: {
+      crossFade: true
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    }
+  });
+</script>
+
+    </body>
+</html>

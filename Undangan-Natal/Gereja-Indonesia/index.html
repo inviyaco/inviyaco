@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Undangan Natal 2025 - Hotel Myko</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Quicksand:wght@400;600&display=swap"
+      rel="stylesheet" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap"
+      rel="stylesheet">
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet">
+
+    <style>
+      /* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #121212;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Container Layout */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Main Title */
+.natal-theme {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3.5rem;
+  text-align: center;
+  color: #FFD700;
+  margin-top: 80px;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+  font-weight: 700;
+}
+
+.church-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+.tagline {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 20px;
+  color: #FFF;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* Ornamental Background */
+.ornamental-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -1;
+  background: url('https://www.transparenttextures.com/patterns/black-linen.png') repeat;
+  opacity: 0.1;
+}
+
+/* Countdown */
+.countdown {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #FFD700;
+  text-align: center;
+  background: rgba(18, 18, 18, 0.9);
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  border: 3px solid #FFD700;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+  animation: pulse 2s infinite ease-in-out;
+  margin-top: 2rem;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 20px rgba(255, 215, 0, 0.5); }
+  100% { transform: scale(1.1); box-shadow: 0 0 30px rgba(255, 215, 0, 0.8); }
+}
+
+/* Speaker Card Container */
+.card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+}
+
+/* Card Styling */
+.card {
+  background-color: #222;
+  border: 2px solid #444;
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  background-image: url('https://www.transparenttextures.com/patterns/diamond-sky.png');
+  background-size: cover;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.card h3 {
+  font-size: 1.8rem;
+  color: #FFD700;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.card p {
+  font-size: 1.2rem;
+}
+
+/* Speaker Section */
+.speaker-card {
+  background: linear-gradient(135deg, #2a2a2a, #444);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: 0.3s ease;
+}
+
+.speaker-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.speaker-card h3 {
+  font-size: 2rem;
+  color: #FFD700;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.speaker-card h4 {
+  font-size: 1.5rem;
+  color: #FFD700;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.speaker-card p {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+.speaker-img-container {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #FFD700;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.speaker-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.speaker-img:hover {
+  transform: scale(1.1);
+}
+
+/* Button Style */
+.btn {
+  background-color: #FFD700;
+  color: #111;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  margin: 3rem auto;
+  transition: 0.3s ease;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #FFB700;
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+  background-color: #222;
+  padding: 2rem;
+  text-align: center;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  margin-top: 5rem;
+}
+
+.footer p {
+  color: #bbb;
+  font-size: 1rem;
+}
+
+.footer a {
+  color: #FFD700;
+  text-decoration: none;
+}
+
+.floating-music-btn {
+  position: fixed !important; /* Pastikan tetap di layar */
+  bottom: 20px;               /* Jarak dari bawah layar */
+  right: 20px;                /* Jarak dari kanan layar */
+  z-index: 9999;              /* Tombol tetap di atas elemen lain */
+  background-color: #FFD700;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 1.5rem;
+  color: #111;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  user-select: none;
+  pointer-events: auto; /* Tombol tetap bisa diklik */
+  transform: none !important; /* Menghindari transformasi yang mengubah posisi */
+}
+
+.floating-music-btn:hover {
+  background-color: #FFB700;
+}
+
+.floating-music-btn:focus,
+.floating-music-btn:active {
+  outline: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Bayangan tetap konsisten */
+  transform: none !important;  /* Pastikan tidak ada perubahan posisi */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .natal-theme {
+    font-size: 2.5rem;
+  }
+
+  .tagline {
+    font-size: 1.2rem;
+    padding: 0 1rem;
+  }
+
+  .countdown {
+    font-size: 1.8rem;
+    padding: 1rem;
+  }
+
+  .card-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .speaker-card {
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+
+  .floating-music-btn {
+    right: 10px;  /* Slightly reduced position for small screens */
+    bottom: 10px; /* Slightly reduced position for small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .natal-theme {
+    font-size: 2rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+
+  .floating-music-btn {
+    right: 10px !important;  /* Menyesuaikan sedikit lebih rapat di layar kecil */
+    bottom: 10px !important; /* Menyesuaikan sedikit lebih rapat di layar kecil */
+  }
+}
+
+    </style>
+  </head>
+
+  <body>
+    <button class="floating-music-btn" onclick="toggleMusic()">🔊</button>
+    <audio id="bg-music" loop autoplay>
+      <source src="Assets/music.mp3" type="audio/mpeg" />
+    </audio>
+
+    <!-- Ornamental Background -->
+    <div class="ornamental-bg"></div>
+
+    <!-- Main Title Section -->
+    <h1 class="natal-theme">"Terang yang Datang ke Dalam Dunia"</h1>
+    <!-- Tema Natal -->
+    <h2 class="church-name">Gereja Indonesia</h2> <!-- Nama Gereja -->
+
+    <!-- Countdown Timer -->
+    <div class="countdown" id="countdown-timer">
+      <span id="countdown"></span>
+    </div>
+
+    <!-- Card Section with Event Details -->
+    <div class="container card-wrapper">
+      <div class="card">
+        <h3>📍 Lokasi</h3>
+        <p>Gereja Ebenhaezer, Jl. Damai No. 23, Makassar</p>
+      </div>
+      <div class="card">
+        <h3>🕒 Waktu</h3>
+        <p>Senin, 25 Desember 2025<br>Pukul 18:30 WITA - Selesai</p>
+      </div>
+      <div class="card">
+        <h3>📖 Tema Khotbah</h3>
+        <p><em>"Terang yang Datang ke Dalam Dunia"</em></p>
+      </div>
+      <!-- Pembicara Card Container yang berada di tengah -->
+      <div class="speaker-card-container">
+        <div class="card speaker-card">
+          <h3>🗣️ Pembicara</h3>
+          <div class="speaker-img-container">
+            <img class="speaker-img" src="Assets/pendeta.jpg"
+              alt="Pastor Marcel">
+          </div>
+          <h4>Pastor Marcel</h4>
+          <p><em>"Natal adalah tentang kelahiran harapan dan kasih yang tiada habisnya."</em></p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA Button -->
+    <a
+      href="#"
+      class="btn">🎟️ Daftar Sekarang</a>
+
+    <!-- Embedded Google Maps -->
+    <div class="container my-5 text-center">
+      <h5 style="color: #FFD700; font-weight: bold; margin-bottom: 1rem;">📍
+        Lokasi Acara</h5>
+      <div class="ratio ratio-16x9"
+        style="max-width: 600px; margin: 0 auto; border: 3px solid #FFD700; border-radius: 15px; overflow: hidden;">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.721547667898!2d119.4309753147536!3d-5.152149953138108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbf020b01747e2d%3A0x5d91f4e1d7ab1f64!2sGereja%20Ebenhaezer!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid"
+          width="100%" height="100%" style="border:0;" allowfullscreen
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <p>&copy; 2025 Gereja Indonesia • Designed by <span
+          style="color: #2ecc71;">I</span>nviyaco.</p>
+    </footer>
+
+    <script>
+      // Countdown Timer Script
+      function updateCountdown() {
+        const now = new Date();
+        const eventDate = new Date('2025-12-25T18:30:00'); // Replace with event date
+        const diff = eventDate - now;
+
+        if (diff <= 0) {
+          document.getElementById('countdown').innerHTML = "Acara Dimulai!";
+          clearInterval(countdownInterval);
+        } else {
+          const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+          document.getElementById('countdown').innerHTML = `${days} Hari ${hours} Jam ${minutes} Menit`;
+        }
+      }
+
+      // Update countdown every minute
+      const countdownInterval = setInterval(updateCountdown, 60000);
+      updateCountdown();
+
+       const audio = document.getElementById('bg-music');
+  const button = document.querySelector('.floating-music-btn');
+  let isPlaying = true;
+
+  function toggleMusic() {
+    if (isPlaying) {
+      audio.pause();
+      button.innerHTML = '🔇';
+    } else {
+      audio.play();
+      button.innerHTML = '🔊';
+    }
+    isPlaying = !isPlaying;
+  }
+    </script>
+  </body>
+</html>

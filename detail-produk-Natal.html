@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Detail Produk - Sarah & Alvin</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+            rel="stylesheet" />
+        <!-- Swiper CSS -->
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+        <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #121212;
+      color: #f1f1f1;
+    }
+
+    h1, h2, h3 {
+      color: #2ecc71;
+    }
+
+    .btn-success-custom {
+      background-color: #2ecc71;
+      border: none;
+      color: white;
+    }
+
+    .btn-success-custom:hover {
+      background-color: #27ae60;
+    }
+
+    .product-container {
+      background-color: #1e2b23;
+      border-radius: 1rem;
+      padding: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .main-image {
+      width: 100%;
+      border-radius: 1rem;
+      object-fit: cover;
+      max-height: 400px;
+    }
+
+    .thumbnail-images img {
+      height: 80px;
+      width: 80px;
+      object-fit: cover;
+      border-radius: 0.5rem;
+      margin-right: 10px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: border 0.3s;
+    }
+
+    .thumbnail-images img:hover,
+    .thumbnail-images img.active {
+      border: 2px solid #2ecc71;
+    }
+
+    footer {
+      background-color: #1e2b23;
+      padding: 3rem 1rem;
+      color: #ccc;
+      text-align: center;
+    }
+
+    footer a {
+      color: #2ecc71;
+      text-decoration: none;
+    }
+
+    .swiper {
+    width: 100%;
+    border-radius: 1rem;
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    object-fit: cover;
+    max-height: 400px;
+  }
+
+    @media (max-width: 768px) {
+      .main-image {
+        max-height: 250px;
+      }
+
+      .thumbnail-images img {
+        height: 60px;
+        width: 60px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+      .swiper-slide img {
+      max-height: 250px;
+    }
+    }
+  </style>
+    </head>
+
+    <body>
+        <!-- Tombol Kembali di kiri atas, tidak mengikuti scroll -->
+        <div class="container-fluid pt-3 ps-3">
+            <a href="javascript:history.back()" class="btn btn-outline-light">
+                &larr; Kembali
+            </a>
+        </div>
+
+        <div class="container my-5 product-container">
+            <div class="row g-4">
+                <!-- Gallery Gambar -->
+                <div class="col-md-6">
+                    <!-- Swiper -->
+                    <div class="swiper mySwiper mb-3">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="Assets/Natal-1.PNG" class="main-image"
+                                    alt="Produk 1">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="Assets/Natal-3.PNG" class="main-image"
+                                    alt="Produk 2">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="Assets/Natal-2.PNG" class="main-image"
+                                    alt="Produk 3">
+                            </div>
+                        </div>
+                        <!-- Pagination (optional) -->
+                        <div class="swiper-pagination mt-2"></div>
+                    </div>
+
+                    <!-- Konten tambahan di bawah gallery gambar -->
+                    <h3 class="text-success mt-4">Mengapa Memilih Undangan
+                        Digital
+                        Ini?</h3>
+                    <p class="text-light">
+                        Undangan digital kami hadir dengan desain yang elegan
+                        dan dapat
+                        disesuaikan sepenuhnya sesuai keinginan Anda. Beberapa
+                        alasan
+                        mengapa Anda harus memilih produk kami:
+                    </p>
+                    <ul class="text-light">
+                        <li>Desain modern dan responsif, dapat dibuka di semua
+                            perangkat.</li>
+                        <li>Fleksibel dalam penyesuaian tema dan warna sesuai
+                            selera
+                            Anda.</li>
+                        <li>Pemilihan kata-kata dapat disesuaikan agar lebih
+                            personal.</li>
+                        <li>Hemat biaya karena tidak perlu mencetak undangan
+                            fisik.</li>
+                        <li>Tampilan yang mudah dibagikan melalui WhatsApp,
+                            sosial media,
+                            atau email.</li>
+                    </ul>
+                </div>
+
+                <!-- Info Produk -->
+                <div class="col-md-6">
+                    <h1>Undangan Natal Digital</h1>
+                    <h3 class="text-warning mb-3">Rp 100.000</h3>
+                    <p>Produk ini adalah undangan digital atau undangan online
+                        khusus untuk perayaan Natal yang dirancang modern,
+                        estetik, dan mudah diakses oleh siapa pun. Dengan
+                        membeli undangan ini, Anda akan mendapatkan akses penuh
+                        selama 1 minggu, di mana Anda bebas melakukan berbagai
+                        permintaan kustomisasi, seperti:</p>
+                    <ul>
+                        <li>Pemilihan tema Natal sesuai dengan keinginan Anda
+                            dan keluarga</li>
+                        <li>Penyesuaian kata-kata atau pesan Natal agar lebih
+                            personal dan penuh makna</li>
+                        <li>Tambahan halaman khusus untuk ucapan Natal kepada
+                            tamu spesial atau orang-orang terdekat</li>
+                        <li>Desain responsif, tampil sempurna di HP maupun
+                            desktop</li>
+                        <li>Mudah dibagikan ke WhatsApp, media sosial, atau
+                            email</li>
+                        <li>Bisa Request Lagu Natal Sesuai Keinginan</li>
+                    </ul>
+
+                    <a
+                        href="https://wa.me/6285141348642?text=Halo, saya ingin memesan produk ini!"
+                        class="btn btn-success-custom mt-3" target="_blank">
+                        Pesan via WhatsApp
+                    </a>
+
+                    <!-- Tombol Demo -->
+                    <a
+                        href="Undangan-Natal/Gereja-Indonesia/index.html"
+                        class="btn btn-outline-success mt-3" target="_blank">
+                        Lihat Demo Undangan
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="container-fluid mt-5">
+            <div class="row py-4 px-3 text-center text-md-start"
+                style="background-color: #1e2b23;">
+                <!-- Kontak -->
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-success">Kontak Kami</h5>
+                    <p>📧 <a href="mailto:info@inviyaco.my.id"
+                            class="text-decoration-none text-light">info@inviyaco.my.id</a></p>
+                    <p>📞 <a href="tel:085141348642"
+                            class="text-decoration-none text-light">0851-4134-8642</a></p>
+                    <p>📍 Jl. K. H. Wahid Hasyim No.39, Sungguminasa, Kec. Somba
+                        Opu, Kabupaten Gowa, Sulawesi Selatan 92111,
+                        Indonesia</p>
+                    <p>🕒 Jam Operasional: 09.00 - 23.00 WITA</p>
+                </div>
+                <!-- Sosial Media -->
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-success">Sosial Media</h5>
+                    <p>
+                        <a href="index.html"
+                            class="text-decoration-none text-light me-3">🌐
+                            Website</a>
+                        <a
+                            href="https://www.instagram.com/inviyaco?igsh=MXQ3MW9oczdmOTliaw=="
+                            class="text-decoration-none text-light me-3">📸
+                            Instagram</a>
+                        <a href="https://wa.me/6285141348642"
+                            class="text-decoration-none text-light">💬
+                            WhatsApp</a>
+                    </p>
+                    <p>Ikuti kami untuk update desain dan promo terbaru!</p>
+                </div>
+                <!-- Google Maps -->
+                <div class="col-md-4">
+                    <h5 class="text-success">Lokasi</h5>
+                    <iframe class="map"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.0957031220197!2d119.4522381!3d-5.2090882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbee3d9227ab505%3A0xc0f2dc532a96caf5!2sBalla+Lompoa+Museum!5e0!3m2!1sen!2sid!4v1715110979399"
+                        width="100%" height="200" style="border:0;"
+                        allowfullscreen loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="text-center py-3"
+                style="background: linear-gradient(to right, #2ecc71, #0a0a0a);">
+                <small style="color: #f1f1f1;">
+                    &copy; 2025 <strong
+                        style="color: #ffffff;">Inviyaco.my.id</strong> — All
+                    rights reserved.
+                    <span style="opacity: 0.85; color: white;">
+                        Desain dan pengembangan oleh
+                        <span style="color: #2ecc71;">I</span>nviyaco.
+                    </span>
+                </small>
+            </div>
+        </footer>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <script>
+      const swiper = new Swiper(".mySwiper", {
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
